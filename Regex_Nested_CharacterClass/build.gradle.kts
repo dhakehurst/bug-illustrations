@@ -1,0 +1,12 @@
+
+
+kotlin {
+
+    jvm() {
+    }
+
+    js(){
+        nodejs()
+    }
+
+}
