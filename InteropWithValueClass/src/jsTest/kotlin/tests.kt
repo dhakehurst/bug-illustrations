@@ -7,23 +7,20 @@ class Tests {
 
     @Test
     fun test1() {
-
-        val vc1 = VC1("myvalue")
-
+        val jsclass = VC1::class.js
+        val vc1 = js("Reflect.construct(jsclass, ['myvalue'])") // VC1("myvalue")
         val jsValue = js("vc1.value")
 
-         assertEquals(vc1.value, jsValue)
+         assertEquals("myvalue", jsValue)
     }
 
     @Test
     fun test2() {
-
-        val l = listOf(VC2("myvalue"))
-
-        val vc2 = js("l.get(0)")
+        val jsclass = VC2::class.js
+        val vc2 = js("Reflect.construct(jsclass, ['myvalue'])") // VC2("myvalue")
         val jsValue = js("vc2.value")
 
-        assertEquals(vc2.value, jsValue)
+        assertEquals("myvalue", jsValue)
     }
 
 }

@@ -1,6 +1,11 @@
 plugins {
     alias(libs.plugins.exportPublic)
 }
+
+repositories {
+    gradlePluginPortal()
+}
+
 kotlin {
 
     jvm {
