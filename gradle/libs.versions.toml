@@ -1,8 +1,8 @@
 [versions]
-project = "2.0.20"
+project = "2.1.21"
 
-kotlin = "2.0.20"
-exportPublic = "2.0.20-rc1"
+kotlin = "2.1.21"
+exportPublic = "2.1.21"
 
 [libraries]
 

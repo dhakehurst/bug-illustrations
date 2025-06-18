@@ -1,10 +1,4 @@
 plugins {
-    alias(libs.plugins.exportPublic)
-}
-
-repositories {
-    gradlePluginPortal()
-    mavenCentral()
 }
 
 kotlin {
@@ -20,11 +14,15 @@ kotlin {
         binaries.library()
         generateTypeScriptDefinitions()
     }
-
     applyDefaultHierarchyTemplate()
     sourceSets {
         all {
-            //languageSettings.optIn("kotlin.ExperimentalStdlibApi")
+            languageSettings.optIn("kotlin.ExperimentalStdlibApi")
+        }
+        jvmTest {
+            dependencies {
+                implementation(kotlin("reflect"))
+            }
         }
     }
 }

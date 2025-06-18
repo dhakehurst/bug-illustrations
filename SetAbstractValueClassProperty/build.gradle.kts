@@ -6,11 +6,9 @@ repositories {
     gradlePluginPortal()
     mavenCentral()
 }
-
 kotlin {
 
-    jvm {
-    }
+    jvm { }
 
     js {
         compilerOptions {
