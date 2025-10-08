@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.kotlin) apply false
+    //kotlin("multiplatform") version "2.1.21" apply false
+    kotlin("multiplatform") version "2.2.0" apply false
 }
 
 allprojects {
@@ -7,18 +8,6 @@ allprojects {
         mavenCentral()
     }
 
-    group = rootProject.name
-    version = rootProject.libs.versions.project.get()
 
     project.layout.buildDirectory = File(rootProject.projectDir, ".gradle-build/${project.name}")
-}
-
-subprojects {
-
-    apply(plugin = "org.jetbrains.kotlin.multiplatform")
-
-    dependencies {
-        "commonTestImplementation"(kotlin("test"))
-        "commonTestImplementation"(kotlin("test-annotations-common"))
-    }
 }

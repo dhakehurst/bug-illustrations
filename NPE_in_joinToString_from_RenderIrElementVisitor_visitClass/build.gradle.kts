@@ -1,4 +1,6 @@
-
+plugins {
+    kotlin("multiplatform")
+}
 
 kotlin {
 

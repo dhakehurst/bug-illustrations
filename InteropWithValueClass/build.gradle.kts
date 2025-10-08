@@ -1,4 +1,5 @@
 plugins {
+    kotlin("multiplatform")
 }
 
 kotlin {
@@ -20,4 +21,9 @@ kotlin {
             languageSettings.optIn("kotlin.ExperimentalStdlibApi")
         }
     }
+}
+
+dependencies {
+    "commonTestImplementation"(kotlin("test"))
+    "commonTestImplementation"(kotlin("test-annotations-common"))
 }
