@@ -1,6 +1,5 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.js-plain-objects") version "2.2.20"
     id("org.jetbrains.compose") version "1.9.0"
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.20"
 }
@@ -12,6 +11,10 @@ repositories {
 }
 
 kotlin {
+    js {
+        binaries.executable()
+        browser()
+    }
     wasmJs {
         binaries.executable()
         browser()
