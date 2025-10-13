@@ -24,8 +24,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-js:2025.10.3")
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-browser:2025.10.3")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-js:2025.10.7")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-browser:2025.10.7")
                 implementation(compose.runtime)
                 implementation(compose.ui)
                 implementation(compose.foundation)
