@@ -1,6 +1,5 @@
 plugins {
     kotlin("multiplatform")
-    //alias(libs.plugins.exportPublic)
 }
 
 repositories {
@@ -18,16 +17,11 @@ kotlin {
             target.set("es2015")
         }
         nodejs()
+        browser()
         binaries.library()
         generateTypeScriptDefinitions()
     }
-
     applyDefaultHierarchyTemplate()
-    sourceSets {
-        all {
-            //languageSettings.optIn("kotlin.ExperimentalStdlibApi")
-        }
-    }
 }
 
 dependencies {
